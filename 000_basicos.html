@@ -11,7 +11,6 @@
     <p>Para ver el resultado de la ejecución del código, abre la consola del navegador</p>
     <p>En la consola se mostrará el mensaje "Hola Mundo"</p>
     <script>
-        var hola = "Hola Mundo";
         console.log(hola);
         // Esto es un comentario de una sola línea
         /* Esto 
@@ -20,7 +19,37 @@
         de varias 
         líneas
         */
-        
+        let hello = "Hello world with let"; // let funciona con alcance de bloque, es la manera adecuada y moderna de declarar variables, ASI SE HACE AHORA.
+        var hola = "Hola Mundo con var"; // var funciona con alcance de función el cual es global, es la manera antigua de declarar variables,ASI NO SE DEBE HACER AHORA.
+        console.log(hello);
+        console.log(hola);
+        console.log(window);
+        var musica = "rock";
+        console.log("Esta es la variable musica antes del bloque: " + musica);
+        {
+            var musica = "pop";
+        console.log("Esta es la variable musica dentro del bloque: " + musica);
+        }
+        console.log("Esta es la variable musica despues del bloque: " + musica); // como tiene alcance global, no termina en el bloque sigue existiendo y su valor es el del bloque, por eso es recomendable usar let.
+        const PI = 3.1416; // const es una constante, no se puede cambiar su valor, es inmutable, y tiene alcance de bloque.
+        const PHI = 7.4; // las constantes se escriben en mayúsculas, por convención.
+        const GRAVEDAD = 9.8; // las constantes deben ser declaradas e inicializadas al mismo tiempo, no se puede declarar una constante sin inicializarla.
+        //const VELOCIDAD_LUZ; // esto es un error, no se puede declarar una constante sin inicializarla.
+        /* Un objeto es un tipo de dato que permite agrupar información relacionada mediante propiedades y sus respectivos valores, representadas entre llaves {}. Una variable declarada con let, const o var puede almacenar un objeto igual que puede almacenar cualquier otro tipo de dato.*/
+        // las constantes const si pueden modificarse si son valores compuestos como objetos, arreglos, funciones, clases, etc. pero no se puede cambiar la referencia de la constante, es decir, no se puede asignar un nuevo objeto a la constante.
+        let objetoCliente = { 
+            nombre: "Transportadora buen viaje",
+            RFC: 30,
+            idCliente: "id001",
+            direccion: "Calle 123",
+        };
+        let colores = ["rojo", "verde", "azul", "amarillo", "morado"];
+        console.log(objetoCliente);
+        console.log(colores);
+        objetoCliente.categoria = "A"; // se puede agregar una propiedad a un objeto después de haberlo declarado.
+        colores.push("cafe"); // se puede agregar un elemento a un arreglo después de haberlo declarado.
+        console.log(objetoCliente);
+        console.log(colores);
     </script>
 </body>
 </html>
